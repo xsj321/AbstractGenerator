@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">NM$L</string>
+    <string name="input_box_name">输入需要转换的文字:</string>
+    <string name="output_box__name">转换结果:</string>
+    <string name="send_by_share">快捷发送</string>
+</resources>
