@@ -4,12 +4,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.xsj321.nmsl.CustomPhraseActivity.CustomPhrase;
 import com.xsj321.nmsl.Util.CopyButtonLibrary;
 import com.xsj321.nmsl.Util.TextUtil;
 
@@ -60,6 +64,24 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add(0,0,1,getResources().getString(R.string.add_custom_phrase));
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getGroupId();
+        switch (id){
+            case 0:
+                Intent  intent = new Intent(this, CustomPhrase.class);
+                startActivity(intent);
+                break;
+        }
+        return true;
     }
 
     public static Context getMainContext() {

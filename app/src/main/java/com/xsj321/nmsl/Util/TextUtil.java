@@ -2,7 +2,9 @@ package com.xsj321.nmsl.Util;
 
 import android.util.Log;
 
+import com.xsj321.nmsl.CustomPhraseActivity.CustomPhrase;
 import com.xsj321.nmsl.Data.Dictionary;
+import com.xsj321.nmsl.MainActivity;
 
 import org.json.JSONException;
 
@@ -14,7 +16,13 @@ public class TextUtil {
         Dictionary dictionary = new Dictionary();
         StringBuilder FeedBack = new StringBuilder();
         for (int i = 0;i<InputString.length();i++){
-            String NowPingYing = FindPingYing(String.valueOf(InputString.charAt(i)));
+            String nowWord = String.valueOf(InputString.charAt(i));
+            if ( CustomPreferencesUtil.getWord(nowWord, MainActivity.getMainContext()) != null){
+                String customWord = CustomPreferencesUtil.getWord(nowWord, MainActivity.getMainContext());
+                FeedBack.append(customWord);
+                continue;
+            }
+            String NowPingYing = FindPingYing(nowWord);
             String NextPingYing = null;
             if (i!=InputString.length()-1){
                 NextPingYing = FindPingYing(String.valueOf(InputString.charAt(i+1)));

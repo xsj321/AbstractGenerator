@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:paddingTop="8dp"
+    >
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        style="@style/ListWordsName"
+        android:text="@string/original_intention"/>
+
+    <TextView
+        android:id="@+id/list_key"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        style="@style/ListWordsValue"
+        tools:text="我"
+    />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        style="@style/ListWordsName"
+        android:text="@string/abstract_intention"/>
+
+    <TextView
+        android:id="@+id/list_value"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        style="@style/ListWordsValue"
+        android:layout_weight="1"
+        tools:text="👴"
+    />
+</LinearLayout>

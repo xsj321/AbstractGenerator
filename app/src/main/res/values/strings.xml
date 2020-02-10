@@ -3,4 +3,21 @@
     <string name="input_box_name">输入需要转换的文字:</string>
     <string name="output_box__name">转换结果:</string>
     <string name="send_by_share">快捷发送</string>
+    <string name="title_activity_custom_phrase">添加自定义词组</string>
+    <string name="add_custom_phrase">添加自定义词组</string>
+    <string name="add_custom_phrase_key">输入相应词语:</string>
+    <string name="add_custom_phrase_value">输入相应的抽象话:</string>
+    <string name="add_custom_phrase_title">输入抽象话映射关系:</string>
+    <string name="accept">确认</string>
+    <string name="cancel">取消</string>
+    <string name="description_of_custom_phrase">
+        自定义添加词组的使用方法:\n\n
+        ★ 输入本身的字(目前只支持单字)然后输入对应的抽象话(可为多个内容)\n\n
+        ★ 自定义的优先级默认高于自带的词库\n\n
+        ★ 删除功能后面会更新，目前需要删除就直接用汉字替换
+    </string>
+    <string name="already_add_words">已经添加的词组:</string>
+    <string name="original_intention">本意:</string>
+    <string name="abstract_intention">抽象话:</string>
+    <string name="replace">已经存在的内容直接输入进行修改</string>
 </resources>
