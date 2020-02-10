@@ -27,6 +27,7 @@ public class CustomPreferencesUtil {
     public static String getWord(String key,Context context){
         SharedPreferencesCustomPhrase = context.getSharedPreferences(SAVE_XML,Context.MODE_PRIVATE);
         String res = SharedPreferencesCustomPhrase.getString(key,null);
+
         Log.d("所有内容",SharedPreferencesCustomPhrase.getAll().toString());
         return res;
     }
