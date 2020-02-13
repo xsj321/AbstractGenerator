@@ -14,10 +14,16 @@
         android:text="@string/input_box_name"
         />
 
-    <EditText
-        android:id="@+id/find_emoji_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <com.xsj321.nmsl.CustomView.MainInputBox
+            android:id="@+id/find_emoji_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+<!--    <EditText-->
+<!--        android:id="@+id/find_emoji_text"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
 
     <Button
         android:id="@+id/find_emoji_button"

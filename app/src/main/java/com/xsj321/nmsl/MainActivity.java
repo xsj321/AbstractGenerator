@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         MainContext = this;
-        final EditText InputTextBox = findViewById(R.id.find_emoji_text);
+        final EditText InputTextBox = findViewById(R.id.find_emoji_text).findViewById(R.id.main_input);
         final Button TranslationButton = findViewById(R.id.find_emoji_button);
         final Button ShareButton = findViewById(R.id.send);
         final EditText TranslationRes = findViewById(R.id.res);
