@@ -7,39 +7,39 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        style="@style/ListWordsName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/input_box_name"
-        />
-
-        <com.xsj321.nmsl.CustomView.MainInputBox
-            android:id="@+id/find_emoji_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-<!--    <EditText-->
-<!--        android:id="@+id/find_emoji_text"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content" />-->
-
-    <Button
-        android:id="@+id/find_emoji_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="查找" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:orientation="vertical">
 
         <TextView
             style="@style/ListWordsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_box_name" />
+
+        <com.xsj321.nmsl.CustomView.MainInputBox
+            android:id="@+id/find_emoji_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--    <EditText-->
+        <!--        android:id="@+id/find_emoji_text"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content" />-->
+
+        <Button
+            android:id="@+id/find_emoji_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查找" />
+
+
+        <TextView
+            style="@style/ListWordsName"
+            android:layout_marginTop="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/output_box__name" />
@@ -55,5 +55,11 @@
             android:layout_height="wrap_content"
             android:text="@string/send_by_share" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        />
 
 </LinearLayout>

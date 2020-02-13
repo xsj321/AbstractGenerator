@@ -51,7 +51,7 @@ public class CustomPhrase extends AppCompatActivity {
             }
         });
         wordsArrayList = CustomPreferencesUtil.getALLasWordList(this);
-        wordAdapter = new WordAdapter(wordsArrayList);
+        wordAdapter = new WordAdapter(wordsArrayList,this);
         wordList.setAdapter(wordAdapter);
 
         Toolbar toolbar=findViewById(R.id.toolbar);

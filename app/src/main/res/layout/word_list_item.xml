@@ -38,4 +38,12 @@
         android:layout_weight="1"
         tools:text="👴"
     />
+
+    <ImageView
+        android:id="@+id/list_delete"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/ic_delete_black_round"
+        />
 </LinearLayout>

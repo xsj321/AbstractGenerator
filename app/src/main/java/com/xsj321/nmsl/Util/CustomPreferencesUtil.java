@@ -43,4 +43,11 @@ public class CustomPreferencesUtil {
         }
         return wordList;
     }
+
+    public static void removeWord(String key,Context context){
+        SharedPreferencesCustomPhrase = context.getSharedPreferences(SAVE_XML,Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = SharedPreferencesCustomPhrase.edit();
+        editor.remove(key);
+        editor.commit();
+    }
 }
