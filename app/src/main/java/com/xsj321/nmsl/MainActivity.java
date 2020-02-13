@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,13 +32,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         MainContext = this;
         final EditText InputTextBox = findViewById(R.id.find_emoji_text).findViewById(R.id.main_input);
-        final Button TranslationButton = findViewById(R.id.find_emoji_button);
         final Button ShareButton = findViewById(R.id.send);
         final EditText TranslationRes = findViewById(R.id.res);
         final TextUtil textUtil = new TextUtil();
-        TranslationButton.setOnClickListener(new View.OnClickListener() {
+
+
+        InputTextBox.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onClick(View v) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
                 try {
                     TranslationRes.setText(textUtil.FindEmoji(InputTextBox.getText().toString()));
                 } catch (IOException e) {
@@ -45,7 +53,13 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
         });
+
 
         TranslationRes.setOnClickListener(new View.OnClickListener() {
             @Override

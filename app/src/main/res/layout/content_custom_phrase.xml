@@ -25,8 +25,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/already_add_words"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp"
+            style="@style/ListWordsName"
+            android:text="@string/already_add_words" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/word_list"

@@ -78,8 +78,9 @@ public class CustomPhrase extends AppCompatActivity {
                        else {
                            CustomPreferencesUtil.setWord(key,value,getBaseContext());
                            wordsArrayList.clear();
-                           wordsArrayList.addAll(CustomPreferencesUtil.getALLasWordList(getBaseContext()));
-                           wordAdapter.notifyDataSetChanged();
+                           ArrayList<Words> words = CustomPreferencesUtil.getALLasWordList(getBaseContext());
+                           wordsArrayList.addAll(words);
+                           wordAdapter.notifyItemChanged(words.size());
                        }
                    }
                }).setNegativeButton(getResources().getString(R.string.cancel),null)
